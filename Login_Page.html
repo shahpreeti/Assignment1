@@ -1,0 +1,85 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="MyStyle1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
+<body>
+<script>
+var id_index;
+function performLogin(id_index){
+	var pwd=document.getElementById("userpwd").value;
+	if(pwd!="")
+	{
+		$.getJSON("https://raw.githubusercontent.com/shahpreeti/Assignment/master/Login_List.json", function(json) {
+		
+			if(json[id_index].loginPass==pwd)
+			{
+				//console.log("login successful");
+				window.location="Home.html";
+				if (typeof(sessionStorage) !== "undefined") 
+				sessionStorage.setItem('uid',json[id_index].loginId);
+			}
+			else
+			alert("incorrect password");		
+		});
+	}
+}
+function verifyId(input_id)
+{
+	$.ajax({ 
+        type: 'GET', 
+        url: 'https://raw.githubusercontent.com/shahpreeti/Assignment/master/Login_List.json', 
+        data: { get_param: 'value' }, 
+        success: function (data) { 
+            var names = $.parseJSON(data);
+			var len=names.length;
+			var flag=false;
+			for(var i=0;i<len;i++)
+			{
+				if(input_id==names[i].loginId)
+				{
+					id_index=i;
+					i=len;
+					var flag=true;
+				}
+			}
+			if(flag!=true)
+			{alert("invalid login id");
+			document.getElementById("loginid").focus();}
+        }
+    });
+}
+function EnteredId()
+{
+	var uid=document.getElementById("loginid").value;
+	if(uid=="")
+	{
+		alert("enter user id first");
+		document.getElementById("loginid").focus();
+	}
+	else
+	verifyId(uid);
+}
+</script>
+<div id="div1">
+<p style="font-size:20px;">Login here or  <a href="SignUp.html" target="_blank">SignUp</a> with us</p>
+<table>
+<tr>
+<td>user id</td>
+<td><input type="text" id ="loginid"></td>
+</tr>
+<tr>
+<td>password</td>
+<td><input type="password" id ="userpwd" onfocus="EnteredId()"></td>
+</tr>
+<tr><br></tr>
+<tr>
+<td></td>
+<td><button id="logbutton" input type = "submit" onclick="performLogin(id_index)">LOGIN</button></td>
+</tr>
+</table>
+<p id="demo"></p>
+</div>
+
+</body>
+</html>

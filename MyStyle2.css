@@ -1,0 +1,35 @@
+#div1
+{
+	margin:150px 900px;
+	padding:20px;
+	border:7px solid yellow;
+	border-radius: 18px;
+	width:300px;
+	background:white;
+}
+body
+{
+	background:#e6f2ff;
+}
+#logbutton
+{
+    height: 30px;  
+    width: 100px;
+	border-radius: 12px;
+	background-color: #008CBA;
+	color:white;
+}
+#company
+{
+	font-size: 40px;
+	color:000099;
+	
+}
+#slogan
+{
+	font-size: 17px;
+	color:0000FF;
+    white-space: nowrap;
+    animation: right 1.5s linear;
+	
+}

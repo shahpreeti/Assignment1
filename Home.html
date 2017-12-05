@@ -1,0 +1,15 @@
+<html>
+<body onload="getUserId()">
+
+<script>
+function getUserId()
+{
+	var name=sessionStorage.getItem('uid');
+	document.getElementById("p1").innerHTML="Welcome "+name;
+}
+</script>
+
+<p id ="p1" style="font-size:20px;"></p>
+
+</body>
+</html>
