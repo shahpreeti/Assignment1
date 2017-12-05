@@ -1,0 +1,40 @@
+
+#div2 .btn {
+  display:none;
+  background-color: #008CBA;
+  color:white;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#div2 .btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#div2 .btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#div2 .btn:hover span {
+  padding-right: 25px;
+}
+
+#div2 .btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}

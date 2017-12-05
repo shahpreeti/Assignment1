@@ -1,16 +1,34 @@
 #div1
 {
-	margin:150px 900px;
+	margin:-350px 950px;
 	padding:20px;
 	border:7px solid yellow;
 	border-radius: 18px;
 	width:300px;
-	background:white;
+	background:#FEFCBF;
+	display:none;
+}
+#div2
+{
+	display:none;
+	width:1400px;
+	background:black;
+}
+#div3
+{
+	animation: imgmove 12s ;
+	position: relative;
+	background-image: url('ClientsImg.jpg') ;
+	width:810px;
+	height:430px;
+	margin:30px;
+	border:1px solid white;
 }
 body
 {
-	background:#e6f2ff;
+	background:none;
 }
+
 #logbutton
 {
     height: 30px;  
@@ -22,14 +40,22 @@ body
 #company
 {
 	font-size: 40px;
-	color:000099;
-	
+	color:white;
+	animation: mymove 1s ;
+	position: relative;
 }
 #slogan
 {
 	font-size: 17px;
 	color:0000FF;
-    white-space: nowrap;
-    animation: right 1.5s linear;
-	
+    animation: mymove 2s ;
+	position: relative;
+}
+@keyframes mymove {
+    from {right: 300px;}
+    to {right: 0px;}
+}
+@keyframes imgmove {
+    from {top: 400px;}
+    to {top: 0px;}
 }
