@@ -25,25 +25,7 @@ $(document).ready(function(){
 
 });
 var id_index;
-function performLogin(id_index){
-	var pwd=document.getElementById("userpwd").value;
-	if(pwd!="")
-	{
-		$.getJSON("https://raw.githubusercontent.com/shahpreeti/Assignment/master/Login_List.json", function(json) {
-		
-			if(json[id_index].loginPass==pwd)
-			{
-				//console.log("login successful");
-				window.location="Home.html";
-				if (typeof(sessionStorage) !== "undefined") 
-				sessionStorage.setItem('uid',json[id_index].loginId);
-			}
-			else
-			alert("incorrect password");		
-		});
-	}
-}
-function tryJsonP(id_index)
+function performLogin(id_index)
 {
 	var pwd=document.getElementById("userpwd").value;
 	if(pwd!="")
@@ -121,7 +103,7 @@ function EnteredId()
 <tr><br></tr>
 <tr>
 <td></td>
-<td><button id="logbutton" input type = "submit" onclick="tryJsonP(id_index)">LOGIN</button></td>
+<td><button id="logbutton" input type = "submit" onclick="performLogin(id_index)">LOGIN</button></td>
 </tr>
 </table>
 <p id="demo"></p>
