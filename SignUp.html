@@ -1,21 +1,22 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="SignUpStyle.css">
+<link rel="stylesheet" type="text/css" href="Header.css">
 <link rel="stylesheet" type="text/css" href="ButtonStyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 </head>
 </head>
 <body>
 <div id="div2">
-<p id="company">third(i)</p>
-<p id="slogan">Information. Intelligence. Insight.</p>
-<p>............................................................................................................................................................................
-<button class="btn" input type = "button" onClick="takeMeHome()"><span>Home</span></button>
-<button class="btn" input type = "button" ><span>Our Work</span></button>
-<button class="btn" input type = "button" ><span>Careers</span></button>
-<button class="btn" input type = "button"><span>Blog</span></button>
-<button class="btn" input type = "button" ><span>More</span></button>
-</p>
+	<p id="company">third(i)</p>
+	<p id="slogan">Information. Intelligence. Insight.</p>
+	<p>............................................................................................................................................................................
+	<button class="btn" input type = "button" onClick="takeMeHome()"><span>Home</span></button>
+	<button class="btn" input type = "button" ><span>Our Work</span></button>
+	<button class="btn" input type = "button" ><span>Careers</span></button>
+	<button class="btn" input type = "button"><span>Blog</span></button>
+	<button class="btn" input type = "button" ><span>More</span></button>
+	</p>
 </div>
 <!--container start-->
 <div id="container">
@@ -92,95 +93,96 @@
   </div>
 </div>
 <script>
-$(document).ready(function(){
+$(document).ready(function()
+{
         $("#div2").fadeIn(3000);
 		$("#container").fadeIn(4000);
-		
-
 });
-function Submit(){
- var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z0-9]*\.[A-Za-z]{2,5}$/;
- var fname = document.form.Name.value,
-  lname = document.form.LastName.value,
-  femail = document.form.Email.value,
-  freemail = document.form.enterEmail.value,
-  fpassword = document.form.Password.value,
-  fmonth = document.form.birthday_month.value,
-  fday = document.form.birthday_day.value,
-  fyear = document.form.birthday_year.value;
+function Submit()
+{
+	var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z0-9]*\.[A-Za-z]{2,5}$/;
+	var fname = document.form.Name.value,
+	lname = document.form.LastName.value,
+	femail = document.form.Email.value,
+	freemail = document.form.enterEmail.value,
+	fpassword = document.form.Password.value,
+	fmonth = document.form.birthday_month.value,
+	fday = document.form.birthday_day.value,
+	fyear = document.form.birthday_year.value;
   
- if( fname == "" )
-   {
-     document.form.Name.focus() ;
-	 document.getElementById("errorBox").innerHTML = "enter the first name";
-     return false;
-   }
- if( lname == "" )
-   {
-     document.form.LastName.focus() ;
-   document.getElementById("errorBox").innerHTML = "enter the last name";
-     return false;
-   }
-   
-   if (femail == "" )
- {
-  document.form.Email.focus();
-  document.getElementById("errorBox").innerHTML = "enter the email";
-  return false;
-  }else if(!emailRegex.test(femail)){
-  document.form.Email.focus();
-  document.getElementById("errorBox").innerHTML = "enter the valid email";
-  return false;
-  }
-  
-   if (freemail == "" )
- {
-  document.form.enterEmail.focus();
-  document.getElementById("errorBox").innerHTML = "Re-enter the email";
-  return false;
-  }else if(!emailRegex.test(freemail)){
-  document.form.enterEmail.focus();
-  document.getElementById("errorBox").innerHTML = "Re-enter the valid email";
-  return false;
-  }
-  
-  if(freemail !=  femail){
-   document.form.enterEmail.focus();
-   document.getElementById("errorBox").innerHTML = "emails are not matching, re-enter again";
-   return false;
-   }
-  
-  
- if(fpassword == "")
-  {
-   document.form.Password.focus();
-   document.getElementById("errorBox").innerHTML = "enter the password";
-   return false;
-  }
-  
-   if (fmonth == "") {
+	if( fname == "" )
+	{
+		document.form.Name.focus() ;
+		document.getElementById("errorBox").innerHTML = "enter the first name";
+		return false;
+	}
+	if( lname == "" )
+	{
+		document.form.LastName.focus() ;
+		document.getElementById("errorBox").innerHTML = "enter the last name";
+		return false;
+	}
+	if (femail == "" )
+	{
+		document.form.Email.focus();
+		document.getElementById("errorBox").innerHTML = "enter the email";
+		return false;
+	}else if(!emailRegex.test(femail))
+	{
+		document.form.Email.focus();
+		document.getElementById("errorBox").innerHTML = "enter the valid email";
+		return false;
+	}
+  	if (freemail == "" )
+	{
+		document.form.enterEmail.focus();
+		document.getElementById("errorBox").innerHTML = "Re-enter the email";
+		return false;
+	}else if(!emailRegex.test(freemail))
+	{
+		document.form.enterEmail.focus();
+		document.getElementById("errorBox").innerHTML = "Re-enter the valid email";
+		return false;
+	}
+  	if(freemail !=  femail)
+	{
+		document.form.enterEmail.focus();
+		document.getElementById("errorBox").innerHTML = "emails are not matching, re-enter again";
+		return false;
+	}
+	if(fpassword == "")
+	{
+		document.form.Password.focus();
+		document.getElementById("errorBox").innerHTML = "enter the password";
+		return false;
+	}
+	if (fmonth == "") 
+	{
         document.form.birthday_month.focus();
-  document.getElementById("errorBox").innerHTML = "select the birthday month";
+		document.getElementById("errorBox").innerHTML = "select the birthday month";
         return false;
-     }
-  if (fday == "") {
+    }
+	if (fday == "") 
+	{
         document.form.birthday_day.focus();
-  document.getElementById("errorBox").innerHTML = "select the birthday day";
+		document.getElementById("errorBox").innerHTML = "select the birthday day";
         return false;
-     }
-  if (fyear == "") {
+    }
+	if (fyear == "") 
+	{
         document.form.birthday_year.focus();
-  document.getElementById("errorBox").innerHTML = "select the birthday year";
+		document.getElementById("errorBox").innerHTML = "select the birthday year";
         return false;
-     }
-  if(document.form.radiobutton[0].checked == false && document.form.radiobutton[1].checked == false){
-    document.getElementById("errorBox").innerHTML = "select your gender";
-    return false;
-   }
-  if(fname != '' && lname != '' && femail != '' && freemail != '' && fpassword != '' && fmonth != '' && fday != '' && fyear != ''){
-   document.getElementById("errorBox").innerHTML = "form submitted successfully";
-   }
-    
+    }
+	if(document.form.radiobutton[0].checked == false && document.form.radiobutton[1].checked == false)
+	{
+		document.getElementById("errorBox").innerHTML = "select your gender";
+		return false;
+	}
+	if(fname != '' && lname != '' && femail != '' && freemail != '' && fpassword != '' && fmonth != '' && fday != '' && fyear != '')
+	{
+		document.getElementById("errorBox").innerHTML = "form submitted successfully";
+	}
 }
 function takeMeHome()
 {

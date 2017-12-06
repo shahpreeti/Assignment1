@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="MyStyle2.css">
+<link rel="stylesheet" type="text/css" href="Header.css">
 <link rel="stylesheet" type="text/css" href="ButtonStyle.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 </head>
@@ -17,6 +18,26 @@
 </p>
 </div>
 <div id="div3"></div>
+<div id="div1">
+<p style="font-size:20px;">Login here or  <a href="SignUp.html" target="_blank">SignUp</a> with us</p>
+<table>
+<tr>
+<td>user id</td>
+<td><input type="text" id ="loginid"></td>
+</tr>
+<tr>
+<td>password</td>
+<td><input type="password" id ="userpwd" onfocus="EnteredId()"></td>
+</tr>
+<tr><br></tr>
+<tr>
+<td></td>
+<td><button id="logbutton" input type = "submit" onclick="performLogin(id_index)">LOGIN</button></td>
+</tr>
+</table>
+<p id="demo"></p>
+</div>
+
 <script>
 $(document).ready(function(){
         $("#div1").fadeIn(3000);
@@ -93,25 +114,5 @@ function takeMeHome()
 	window.location="Login.html";
 }
 </script>
-<div id="div1">
-<p style="font-size:20px;">Login here or  <a href="SignUp.html" target="_blank">SignUp</a> with us</p>
-<table>
-<tr>
-<td>user id</td>
-<td><input type="text" id ="loginid"></td>
-</tr>
-<tr>
-<td>password</td>
-<td><input type="password" id ="userpwd" onfocus="EnteredId()"></td>
-</tr>
-<tr><br></tr>
-<tr>
-<td></td>
-<td><button id="logbutton" input type = "submit" onclick="performLogin(id_index)">LOGIN</button></td>
-</tr>
-</table>
-<p id="demo"></p>
-</div>
-
 </body>
 </html>

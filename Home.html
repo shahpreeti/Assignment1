@@ -1,15 +1,25 @@
 <html>
+<head>
+<link rel="stylesheet" type="text/css" href="Header.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
 <body onload="getUserId()">
 
 <script>
+$(document).ready(function(){
+       
+        $("#div2").fadeIn(2000);
+});
 function getUserId()
 {
 	var name=sessionStorage.getItem('uid');
-	document.getElementById("p1").innerHTML="Welcome "+name;
+	document.getElementById("p1").innerHTML="Welcome "+name+" .";
 }
 </script>
-
-<p id ="p1" style="font-size:20px;"></p>
-
+<div id="div2">
+<p id="company">third(i)</p>
+<p id="slogan">Information. Intelligence. Insight.</p>
+<p id ="p1" style="font-size:20px; color:white;text-align:right;"></p>
+</div>
 </body>
 </html>

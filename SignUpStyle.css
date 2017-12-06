@@ -1,32 +1,3 @@
-#div2
-{
-	display:none;
-	width:1400px;
-	background:black;
-}
-#company
-{
-	font-size: 40px;
-	color:white;
-	animation: mymove 1s ;
-	position: relative;
-}
-#slogan
-{
-	font-size: 17px;
-	color:0000FF;
-    animation: mymove 2s ;
-	position: relative;
-}
-@keyframes mymove {
-    from {right: 300px;}
-    to {right: 0px;}
-}
-
-*{
- margin:0px;
- padding:0px;
- }
 
 #container{
  display:none;
