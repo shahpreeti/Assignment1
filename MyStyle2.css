@@ -1,3 +1,6 @@
+*{
+ margin:0px;
+ }
 #div1
 {
 	margin:-350px 950px;
@@ -26,7 +29,7 @@
 }
 body
 {
-	background:none;
+ background:none;
 }
 
 #logbutton
